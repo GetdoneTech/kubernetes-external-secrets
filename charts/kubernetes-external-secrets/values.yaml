@@ -12,13 +12,13 @@ env:
 #  GOOGLE_APPLICATION_CREDENTIALS: /app/gcp-creds/gcp-creds.json
 
 # Create environment variables from existing k8s secrets
-# envVarsFromSecret:
-#  AWS_ACCESS_KEY_ID:
-#    secretKeyRef: aws-credentials
-#    key: id
-#  AWS_SECRET_ACCESS_KEY:
-#    secretKeyRef: aws-credentials
-#    key: key
+envVarsFromSecret:
+  AWS_ACCESS_KEY_ID:
+    secretKeyRef: aws-asm-credentials
+    key: id
+  AWS_SECRET_ACCESS_KEY:
+    secretKeyRef: aws-asm-credentials
+    key: key
 #  ALICLOUD_ENDPOINT:
 #    secretKeyRef: alicloud-credentials
 #    key: endpoint
