@@ -13,7 +13,7 @@ Edit the file charts/aws-secret/secret.yaml and add the aws credentials to be us
 
  2. Run command 
  `helm template -f charts/kubernetes-external-secrets/values.yaml --output-dir ./output_dir ./charts/kubernetes-external-secrets/`
- 3. `cd ./output_dir && kubectl apply -f deployment.yaml -f rbac.yaml -f service.yaml -f serviceaccount.yaml`
+ 3. `cd ./output_dir/kubernetes-external-secrets/templates && kubectl apply -f deployment.yaml -f rbac.yaml -f service.yaml -f serviceaccount.yaml`
  4. You will see release-name-kubernetes-external-secrets-xxx as a pod in the list now. 
 
 
