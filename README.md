@@ -10,7 +10,7 @@
 > these env vars from existing k8s secrets
 
 Edit the file charts/aws-secret/secret.yaml and add the aws credentials to be used by this tool.
-
+kubectl apply -f secret.yaml
  2. Run command 
  `helm template -f charts/kubernetes-external-secrets/values.yaml --output-dir ./output_dir ./charts/kubernetes-external-secrets/`
  3. `cd ./output_dir/kubernetes-external-secrets/templates && kubectl apply -f deployment.yaml -f rbac.yaml -f service.yaml -f serviceaccount.yaml`
